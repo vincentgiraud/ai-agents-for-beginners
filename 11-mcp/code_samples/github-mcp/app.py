@@ -92,7 +92,8 @@ except Exception as e:
     index_client.create_index(index)
 
 # Always read event descriptions from markdown file
-with open("event-descriptions.md", "r") as f:
+md_path = os.path.join(os.path.dirname(__file__), "event-descriptions.md")
+with open(md_path, "r") as f:
     markdown_content = f.read()
 
 # Split the markdown content into individual event descriptions
